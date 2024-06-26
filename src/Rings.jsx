@@ -6,9 +6,11 @@ export default function Rings() {
 	const itemsRef = useRef([]);
 
 	useFrame((state) => {
+		const elapsed = state.clock.getElapsedTime();
 		itemsRef?.current.forEach((itRef, index) => {
 			let mesh = itRef;
-			let z = (index - 7) * 3.5;
+			// let z = (index - 7) * 3.5;
+			let z = (index - 7) * 3.5 - ((elapsed * 0.4) % 3.5) * 2;
 			mesh.position.set(0, 0, -z);
 
 			let dist = Math.abs(z);
