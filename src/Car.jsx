@@ -61,8 +61,7 @@ export default function Car() {
 		RR.children[4].rotation.x = -t;
 		RL.children[4].rotation.x = -t;
 
-		let MM = group.children[0].children[11].children[2].
-		// children[2]
+		let MM = group.children[0].children[11].children[2].children[2];
 		console.log(MM, "group");
 	});
 
